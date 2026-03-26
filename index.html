@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Garden | Expert Gardening Tips & Inspiration</title>
+    <meta name="description" content="Discover expert gardening advice, plant care guides, landscape design ideas, and organic growing tips. Your journey to a thriving garden starts here.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c2b28;
+            background-color: #fffef7;
+        }
+
+        /* Yellow Theme Color Palette */
+        :root {
+            --primary-yellow: #f9d56e;
+            --deep-yellow: #f4b942;
+            --gold-accent: #e6a017;
+            --soft-cream: #fff8e7;
+            --dark-text: #3e3a35;
+            --light-text: #7a6e5d;
+            --border-light: #f0e2c5;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-yellow), var(--deep-yellow));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .logo h1 {
+            font-size: 2.2rem;
+            color: #2c3e2f;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
+
+        .logo p {
+            color: #2c5e2a;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e2f;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(249,213,110,0.85), rgba(244,185,66,0.9)), url('https://placehold.co/1600x600/FFD966/FFFFFF?text=Beautiful+Garden');
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-radius: 24px;
+            margin-bottom: 3rem;
+            color: #2d3e2b;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2c5e2a;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.02);
+            background: #1e3e1c;
+        }
+
+        /* Sections */
+        .section-title {
+            font-size: 2.2rem;
+            margin: 2rem 0 1rem;
+            color: #4a6b3c;
+            border-left: 6px solid var(--gold-accent);
+            padding-left: 1rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: var(--soft-cream);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border: 1px solid var(--border-light);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            color: #c47b2e;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tips Section */
+        .tips-list {
+            background: var(--soft-cream);
+            padding: 2rem;
+            border-radius: 24px;
+            margin: 2rem 0;
+        }
+
+        .tips-list li {
+            margin-bottom: 1rem;
+            list-style-type: none;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .tips-list li:before {
+            content: "🌻";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #2e3b2c;
+            color: #f9e7c2;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-info a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #5a6e4a;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+            transition: 0.3s;
+            border: 3px solid var(--primary-yellow);
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0;">
+        <div class="logo">
+            <h1>🌼 Golden Garden</h1>
+            <p>Where nature meets golden wisdom</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <div class="hero">
+        <h2>Grow Your Dream Garden</h2>
+        <p>Expert advice, organic methods, and seasonal inspiration — all in one golden place.</p>
+        <a href="#" class="btn">Explore Guides →</a>
+    </div>
+
+    <!-- Featured Section -->
+    <section>
+        <h2 class="section-title">🌱 Featured Gardening Articles</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://placehold.co/600x400/FFE5B4/3c6e3c?text=Composting+Basics" alt="Composting">
+                <div class="card-content">
+                    <h3>The Art of Composting</h3>
+                    <p>Turn kitchen scraps into black gold. Learn how to create nutrient-rich compost that will make your plants thrive naturally.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/600x400/FFD966/3c6e3c?text=Perennial+Flowers" alt="Perennials">
+                <div class="card-content">
+                    <h3>Best Perennials for Sunny Spots</h3>
+                    <p>Discover hardy perennials that return year after year with minimal maintenance — perfect for the lazy gardener.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.co/600x400/F7DC6F/2c5e2a?text=Waterwise+Garden" alt="Waterwise">
+                <div class="card-content">
+                    <h3>Waterwise Gardening</h3>
+                    <p>Save water and money with these smart irrigation techniques and drought-tolerant plant selections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gardening Tips (Rich Content) -->
+    <section>
+        <h2 class="section-title">🌿 Golden Rules of Gardening</h2>
+        <div class="tips-list">
+            <ul>
+                <li><strong>Know Your Zone:</strong> Understanding your USDA hardiness zone is the first step to selecting plants that will flourish naturally.</li>
+                <li><strong>Soil First:</strong> Test your soil pH and amend with organic matter. Healthy soil = healthy plants.</li>
+                <li><strong>Right Plant, Right Place:</strong> Match sun-loving plants to sunny spots, shade lovers to darker corners.</li>
+                <li><strong>Water Deeply, Not Often:</strong> Encourage deep root growth by watering thoroughly 2-3 times per week rather than daily sprinkling.</li>
+                <li><strong>Mulch Magic:</strong> Apply 2-3 inches of organic mulch to retain moisture, suppress weeds, and regulate soil temperature.</li>
+                <li><strong>Companion Planting:</strong> Use nature’s partnerships—marigolds deter pests, basil improves tomato flavor.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Gardening Images -->
+    <section>
+        <h2 class="section-title">🌸 Garden Inspiration Gallery</h2>
+        <div class="gallery">
+            <img src="https://placehold.co/400x300/FFD966/ffffff?text=Rose+Garden" alt="Rose Garden">
+            <img src="https://placehold.co/400x300/F9E076/2c5e2a?text=Vegetable+Bed" alt="Vegetable Bed">
+            <img src="https://placehold.co/400x300/FFCF4A/ffffff?text=Herb+Garden" alt="Herb Garden">
+            <img src="https://placehold.co/400x300/FFB347/ffffff?text=Succulent+Display" alt="Succulents">
+            <img src="https://placehold.co/400x300/F4D03F/ffffff?text=Butterfly+Haven" alt="Butterflies">
+            <img src="https://placehold.co/400x300/FFC857/ffffff?text=Vertical+Garden" alt="Vertical Garden">
+        </div>
+    </section>
+
+    <!-- In-depth Content Block (Example of Long-form Content) -->
+    <section>
+        <h2 class="section-title">📖 The Complete Guide to Organic Vegetable Gardening</h2>
+        <div style="background: #fff8ec; padding: 2rem; border-radius: 24px; margin: 1rem 0;">
+            <p><strong>Why grow your own vegetables?</strong> Nothing compares to the taste of a sun-warmed tomato freshly picked from your backyard. Organic vegetable gardening is not only rewarding but also ensures you and your family eat chemical-free produce. In this extensive guide, we cover everything from seed starting to harvest.</p>
+            <p><strong>Starting Seeds Indoors:</strong> Begin 6-8 weeks before the last frost. Use a high-quality seed-starting mix, provide bottom heat for germination, and ensure 14-16 hours of light with grow lights. Transplant after hardening off for 7 days.</p>
+            <p><strong>Raised Beds vs. In-Ground:</strong> Raised beds warm faster, improve drainage, and reduce soil compaction. Fill with a mix of topsoil, compost, and aged manure. Ideal dimensions are 4 feet wide for easy reach.</p>
+            <p><strong>Crop Rotation:</strong> Avoid planting the same family (nightshades, brassicas, etc.) in the same spot year after year to prevent disease buildup. A 3-year rotation plan keeps soil vitality high.</p>
+            <p><strong>Natural Pest Control:</strong> Encourage beneficial insects like ladybugs and lacewings. Use neem oil or insecticidal soap for aphids. Row covers protect against cabbage moths and carrot flies.</p>
+            <p><strong>Succession Planting:</strong> Extend your harvest by sowing lettuce, radishes, and beans every 2 weeks. Interplant quick-growing crops between slower ones like tomatoes and peppers.</p>
+            <p>With consistent care, your organic vegetable garden will yield bountiful harvests that are healthier and more flavorful than any store-bought produce. Embrace the joy of growing your own food!</p>
+        </div>
+    </section>
+
+    <!-- Additional Content: Seasonal Calendar -->
+    <section>
+        <h2 class="section-title">🗓️ Seasonal Gardening Calendar</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
+            <div style="flex:1; background:#fff2df; padding:1rem; border-radius: 16px;"><strong>🌱 Spring:</strong> Start seeds, clean up beds, plant cool-season crops like peas and lettuce.</div>
+            <div style="flex:1; background:#fff2df; padding:1rem; border-radius: 16px;"><strong>☀️ Summer:</strong> Mulch heavily, water consistently, harvest tomatoes, squash, and herbs.</div>
+            <div style="flex:1; background:#fff2df; padding:1rem; border-radius: 16px;"><strong>🍂 Fall:</strong> Plant garlic, cover crops, divide perennials, and add compost for next year.</div>
+            <div style="flex:1; background:#fff2df; padding:1rem; border-radius: 16px;"><strong>❄️ Winter:</strong> Plan next year's garden, maintain tools, force indoor bulbs, and dream.</div>
+        </div>
+    </section>
+
+    <!-- More Unique Content: Plant Profiles -->
+    <section>
+        <h2 class="section-title">🌻 Top 10 Easy-to-Grow Plants for Beginners</h2>
+        <div class="card-grid">
+            <div class="card"><div class="card-content"><h3>Marigolds</h3><p>Bright, pest-repelling, and drought-tolerant. Perfect for borders and containers.</p></div></div>
+            <div class="card"><div class="card-content"><h3>Zinnias</h3><p>Cut-and-come-again flowers that bloom all summer with minimal care.</p></div></div>
+            <div class="card"><div class="card-content"><h3>Lettuce</h3><p>Fast-growing, harvest outer leaves for weeks of fresh salads.</p></div></div>
+            <div class="card"><div class="card-content"><h3>Basil</h3><p>Fragrant herb that thrives in warm sun — pinch regularly for bushy growth.</p></div></div>
+            <div class="card"><div class="card-content"><h3>Snapdragons</h3><p>Cool-season favorites with colorful spikes that kids love.</p></div></div>
+            <div class="card"><div class="card-content"><h3>Cherry Tomatoes</h3><p>High yield, sweet flavor, and disease-resistant varieties available.</p></div></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌿 Ornixa Moss Loft</h3>
+            <p>📍 123 Greenway Boulevard, Garden Heights, GH 56789</p>
+            <p>📞 <a href="tel:+1234567890">+1 (234) 567-8901</a></p>
+            <p>✉️ hello@goldengarden.com</p>
+        </div>
+        <div class="footer-info">
+            <h4>Quick Links</h4>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Gardening Blog</a></p>
+            <p><a href="#">Workshops</a></p>
+        </div>
+        <div class="footer-info">
+            <h4>Follow Our Garden Journey</h4>
+            <p>🌼 Instagram: @goldengarden</p>
+            <p>🌻 Pinterest: /goldengarden</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Golden Garden by Ornixa Moss Loft. Cultivating beauty since 2010.</p>
+    </div>
+</footer>
+
+</body>
+</html>

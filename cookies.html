@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy | Golden Garden - Your Privacy Matters</title>
+    <meta name="description" content="Learn how Golden Garden uses cookies to enhance your experience, analyze site traffic, and personalize content. Manage your cookie preferences here.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c2b28;
+            background-color: #fffef7;
+        }
+
+        /* Yellow Theme Color Palette (matching contact page) */
+        :root {
+            --primary-yellow: #f9d56e;
+            --deep-yellow: #f4b942;
+            --gold-accent: #e6a017;
+            --soft-cream: #fff8e7;
+            --dark-text: #3e3a35;
+            --light-text: #7a6e5d;
+            --border-light: #f0e2c5;
+            --success-green: #2c5e2a;
+            --error-red: #c94f4f;
+            --cookie-blue: #5b8c5a;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-yellow), var(--deep-yellow));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .logo h1 {
+            font-size: 2.2rem;
+            color: #2c3e2f;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
+
+        .logo p {
+            color: #2c5e2a;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e2f;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section (cookies specific) */
+        .cookies-hero {
+            background: linear-gradient(rgba(249,213,110,0.92), rgba(244,185,66,0.85)), url('https://placehold.co/1600x400/FFD966/FFFFFF?text=Cookies+%26+Your+Privacy');
+            background-size: cover;
+            background-position: center;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 28px;
+            margin-bottom: 2.5rem;
+            color: #2d3e2b;
+        }
+
+        .cookies-hero h2 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .cookies-hero p {
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* Cookie consent banner simulation (interactive) */
+        .cookie-consent-banner {
+            background: #2c3e2f;
+            color: #f9e7c2;
+            padding: 1.2rem 2rem;
+            border-radius: 60px;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .cookie-consent-banner p {
+            flex: 2;
+            font-size: 0.95rem;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-cookie {
+            background: var(--primary-yellow);
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #2c3e2f;
+        }
+
+        .btn-cookie-outline {
+            background: transparent;
+            border: 1px solid var(--primary-yellow);
+            color: var(--primary-yellow);
+        }
+
+        .btn-cookie:hover {
+            background: var(--deep-yellow);
+            transform: scale(1.02);
+        }
+
+        /* Policy Content Cards */
+        .policy-card {
+            background: var(--soft-cream);
+            border-radius: 28px;
+            border: 1px solid var(--border-light);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+        }
+
+        .policy-card h3 {
+            font-size: 1.7rem;
+            color: #4a6b3c;
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--gold-accent);
+            padding-left: 1rem;
+        }
+
+        .policy-card h4 {
+            font-size: 1.2rem;
+            margin: 1.2rem 0 0.5rem;
+            color: #c47b2e;
+        }
+
+        .policy-card p, .policy-card ul {
+            margin-bottom: 1rem;
+        }
+
+        .policy-card ul {
+            padding-left: 1.8rem;
+        }
+
+        .policy-card li {
+            margin: 0.5rem 0;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: #fffef5;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .cookie-table th, .cookie-table td {
+            border: 1px solid var(--border-light);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .cookie-table th {
+            background: var(--primary-yellow);
+            color: #2c3e2f;
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: #fef3df;
+            border-left: 6px solid var(--gold-accent);
+            padding: 1.2rem;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+        }
+
+        /* Preference Center */
+        .pref-center {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .pref-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee3cf;
+        }
+
+        .pref-option:last-child {
+            border-bottom: none;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 52px;
+            height: 26px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.3s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--success-green);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .save-pref-btn {
+            background: var(--success-green);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.6rem;
+            border-radius: 40px;
+            font-weight: bold;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        /* footer same style */
+        footer {
+            background: #2e3b2c;
+            color: #f9e7c2;
+            padding: 3rem 2rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p, .footer-info a {
+            margin: 0.5rem 0;
+            color: #ffd966;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #5a6e4a;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 850px) {
+            .cookie-table th, .cookie-table td {
+                padding: 8px;
+                font-size: 0.85rem;
+            }
+            .cookies-hero h2 {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .cookie-consent-banner {
+                flex-direction: column;
+                text-align: center;
+                border-radius: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0;">
+        <div class="logo">
+            <h1>🌼 Golden Garden</h1>
+            <p>Where nature meets golden wisdom</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <div class="cookies-hero">
+        <h2>🍪 Cookies Policy</h2>
+        <p>We use cookies to cultivate a better experience. This policy explains what cookies are, how we use them, and how you can manage your preferences — because your digital privacy grows with care.</p>
+    </div>
+
+    <!-- Interactive Cookie Consent Reminder (simulated banner) -->
+    <div class="cookie-consent-banner" id="cookieBanner" style="display: flex;">
+        <p>🌿 We value your privacy. Golden Garden uses necessary cookies for site functionality and optional cookies to enhance your browsing, analyze traffic, and personalize garden tips. Do you agree?</p>
+        <div class="cookie-buttons">
+            <button class="btn-cookie" id="acceptCookiesBtn">Accept All</button>
+            <button class="btn-cookie btn-cookie-outline" id="customizeCookiesBtn">Customize</button>
+            <button class="btn-cookie btn-cookie-outline" id="declineCookiesBtn">Decline Non-Essential</button>
+        </div>
+    </div>
+
+    <!-- Main Policy Content -->
+    <div class="policy-card">
+        <h3>📜 What are cookies?</h3>
+        <p>Cookies are small text files placed on your device when you visit a website. They help us remember your preferences, understand how you interact with our garden community, and improve our services. Cookies are completely safe and cannot carry viruses or harm your device.</p>
+        <div class="highlight-box">
+            🌱 At Golden Garden, we believe in transparency — just like healthy soil, clear information helps trust grow.
+        </div>
+    </div>
+
+    <div class="policy-card">
+        <h3>🍪 How we use cookies</h3>
+        <p>We categorize cookies based on their purpose. Here’s how they help your gardening experience flourish:</p>
+        <ul>
+            <li><strong>Strictly Necessary Cookies:</strong> Essential for navigation, login, and security. You cannot disable these if you want the site to function.</li>
+            <li><strong>Performance & Analytics Cookies:</strong> Help us count visits, see which pages are most popular (like our plant library or contact form), and improve performance.</li>
+            <li><strong>Functional Cookies:</strong> Remember your preferences such as language or favorite plant categories, so you don’t have to set them again.</li>
+            <li><strong>Targeting/Advertising Cookies:</strong> Occasionally used to show you relevant gardening offers or events based on your interests.</li>
+        </ul>
+    </div>
+
+    <div class="policy-card">
+        <h3>📋 List of cookies we may use</h3>
+        <table class="cookie-table">
+            <thead>
+                <tr><th>Cookie Name</th><th>Type</th><th>Duration</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>golden_session</td><td>Necessary</td><td>Session</td><td>Maintains your logged-in status and site functionality.</td></tr>
+                <tr><td>gg_preferences</td><td>Functional</td><td>1 year</td><td>Stores your language and theme preferences (light/dark mode).</td></tr>
+                <tr><td>_ga_*</td><td>Analytics</td><td>2 years</td><td>Google Analytics: distinguishes unique visitors.</td></tr>
+                <tr><td>gg_plant_fav</td><td>Functional</td><td>6 months</td><td>Remembers favorite plant categories for personalized tips.</td></tr>
+                <tr><td>marketing_garden</td><td>Targeting</td><td>90 days</td><td>Used to tailor gardening workshops and offers.</td></tr>
+            </tbody>
+        </table>
+        <p><em>Note: Third-party services (like embedded videos or social media) may also set cookies. We manage these with care.</em></p>
+    </div>
+
+    <!-- Cookie Preference Center (interactive) -->
+    <div class="pref-center" id="prefCenter">
+        <h3 style="color:#4a6b3c; border-left: 5px solid var(--gold-accent); padding-left: 1rem; margin-bottom: 1.2rem;">⚙️ Manage Your Cookie Preferences</h3>
+        <p style="margin-bottom: 1rem;">You can change your cookie settings anytime below. Necessary cookies are always active to ensure core functionality.</p>
+        
+        <div class="pref-option">
+            <div><strong>✅ Strictly Necessary Cookies</strong><br><span style="font-size:0.85rem;">Always active — required for the website to work.</span></div>
+            <div><span style="background:#e9e0ce; padding: 5px 12px; border-radius: 40px; font-size:0.8rem;">Always On</span></div>
+        </div>
+        
+        <div class="pref-option">
+            <div><strong>📊 Analytics & Performance Cookies</strong><br><span style="font-size:0.85rem;">Help us understand visitor behavior and improve our garden content.</span></div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="analyticsToggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="pref-option">
+            <div><strong>🎨 Functional & Personalization Cookies</strong><br><span style="font-size:0.85rem;">Remember your settings and favorite plant selections.</span></div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="functionalToggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="pref-option">
+            <div><strong>📢 Targeting / Advertising Cookies</strong><br><span style="font-size:0.85rem;">Deliver relevant gardening offers and event reminders.</span></div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="targetingToggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <button class="save-pref-btn" id="savePreferencesBtn">🌻 Save My Preferences</button>
+        <div id="prefFeedback" style="margin-top: 12px; font-size:0.9rem; color:#2c5e2a;"></div>
+    </div>
+
+    <div class="policy-card">
+        <h3>🌍 Third-party cookies & external services</h3>
+        <p>We occasionally embed content from gardening platforms, YouTube tutorials, or social features. These third parties may set their own cookies. We recommend reviewing their policies: for example, YouTube (Google), Instagram, and Pinterest. Our website does not control those cookies, but we limit their use to enhance your garden inspiration.</p>
+        <div class="highlight-box">
+            🌼 Golden Garden does not sell your personal data. Any cookie data is used solely to improve your experience and grow our community.
+        </div>
+    </div>
+
+    <div class="policy-card">
+        <h3>🛠️ How to manage or delete cookies</h3>
+        <p>You can control cookies through your browser settings. Most browsers allow you to block or delete cookies. However, disabling necessary cookies may affect the functionality of our site — like remembering your favorite plant articles. Below are links to manage cookies in common browsers:</p>
+        <ul>
+            <li><a href="#" style="color: #c47b2e;">Google Chrome</a> – Settings → Privacy and Security → Cookies</li>
+            <li><a href="#" style="color: #c47b2e;">Safari</a> – Preferences → Privacy → Manage Website Data</li>
+            <li><a href="#" style="color: #c47b2e;">Firefox</a> – Options → Privacy & Security → Cookies and Site Data</li>
+            <li><a href="#" style="color: #c47b2e;">Microsoft Edge</a> – Settings → Cookies and site permissions</li>
+        </ul>
+        <p>Also, you can opt out of Google Analytics tracking by installing the <strong>Google Analytics Opt-out Browser Add-on</strong>.</p>
+    </div>
+
+    <div class="policy-card">
+        <h3>📅 Updates to this Cookies Policy</h3>
+        <p>We may update this policy from time to time as our garden grows and digital practices evolve. The latest version will always be posted on this page with the effective date. If significant changes occur, we’ll notify you via a notice on our homepage or by email.</p>
+        <p><strong>Effective Date:</strong> January 1, 2025</p>
+    </div>
+
+    <div class="policy-card">
+        <h3>📬 Questions about cookies?</h3>
+        <p>If you have any questions regarding our cookie usage, feel free to reach out to our Data Protection Gardener (yes, we love the title!) at <a href="mailto:privacy@goldengarden.com" style="color:#c47b2e;">privacy@goldengarden.com</a> or use our <a href="contact.html" style="color:#c47b2e;">contact form</a>. We're happy to help you cultivate a secure online experience.</p>
+    </div>
+
+    <!-- Additional gardening note -->
+    <div style="background: #fef3df; border-radius: 24px; padding: 1.5rem; text-align: center; margin: 1rem 0;">
+        <p>🌻 <strong>Did you know?</strong> Just like perennials, cookie preferences can be saved and revisited. Your choices help us deliver the best garden content tailored to you.</p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌿 Ornixa Moss Loft</h3>
+            <p>📍 123 Greenway Boulevard, Garden Heights, GH 56789</p>
+            <p>📞 <a href="tel:+1234567890">+1 (234) 567-8901</a></p>
+            <p>✉️ hello@goldengarden.com</p>
+        </div>
+        <div class="footer-info">
+            <h4>Quick Links</h4>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+            <p><a href="cookies.html">Cookies Policy</a></p>
+            <p><a href="terms.html">Terms of Use</a></p>
+        </div>
+        <div class="footer-info">
+            <h4>Follow Our Garden Journey</h4>
+            <p>🌼 Instagram: @goldengarden</p>
+            <p>🌻 Pinterest: /goldengarden</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Golden Garden by Ornixa Moss Loft. Cultivating beauty since 2010. Respecting your privacy, one cookie at a time.</p>
+    </div>
+</footer>
+
+<script>
+    // Cookie Banner and Preference Management with localStorage simulation
+    // This demonstrates interactive cookie preferences for demo purposes.
+    
+    // DOM elements
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptAllBtn = document.getElementById('acceptCookiesBtn');
+    const customizeBtn = document.getElementById('customizeCookiesBtn');
+    const declineBtn = document.getElementById('declineCookiesBtn');
+    const analyticsToggle = document.getElementById('analyticsToggle');
+    const functionalToggle = document.getElementById('functionalToggle');
+    const targetingToggle = document.getElementById('targetingToggle');
+    const savePrefBtn = document.getElementById('savePreferencesBtn');
+    const prefFeedback = document.getElementById('prefFeedback');
+    
+    // Helper: load saved preferences from localStorage (simulate cookie consent state)
+    function loadSavedPreferences() {
+        const savedPrefs = localStorage.getItem('goldenGardenCookiePrefs');
+        if (savedPrefs) {
+            try {
+                const prefs = JSON.parse(savedPrefs);
+                if (analyticsToggle) analyticsToggle.checked = prefs.analytics !== undefined ? prefs.analytics : true;
+                if (functionalToggle) functionalToggle.checked = prefs.functional !== undefined ? prefs.functional : true;
+                if (targetingToggle) targetingToggle.checked = prefs.targeting !== undefined ? prefs.targeting : true;
+                // If we have a banner dismissed flag, hide banner
+                if (prefs.bannerDismissed) {
+                    if (cookieBanner) cookieBanner.style.display = 'none';
+                } else {
+                    if (cookieBanner) cookieBanner.style.display = 'flex';
+                }
+                return prefs;
+            } catch(e) { console.warn(e); }
+        }
+        // default: no saved preferences -> banner visible
+        if (cookieBanner) cookieBanner.style.display = 'flex';
+        return { analytics: true, functional: true, targeting: true, bannerDismissed: false };
+    }
+    
+    // Save preferences to localStorage
+    function savePreferences(analyticsVal, functionalVal, targetingVal, bannerDismissedVal = true) {
+        const prefs = {
+            analytics: analyticsVal,
+            functional: functionalVal,
+            targeting: targetingVal,
+            bannerDismissed: bannerDismissedVal
+        };
+        localStorage.setItem('goldenGardenCookiePrefs', JSON.stringify(prefs));
+        // show feedback
+        if (prefFeedback) {
+            prefFeedback.textContent = '🌿 Your cookie preferences have been saved. Thank you for helping us customize your garden experience!';
+            prefFeedback.style.color = '#2c5e2a';
+            setTimeout(() => { if(prefFeedback) prefFeedback.textContent = ''; }, 3000);
+        }
+        // hide banner after saving if needed
+        if (cookieBanner) cookieBanner.style.display = 'none';
+    }
+    
+    // Accept all: set all true, hide banner
+    function acceptAll() {
+        if (analyticsToggle) analyticsToggle.checked = true;
+        if (functionalToggle) functionalToggle.checked = true;
+        if (targetingToggle) targetingToggle.checked = true;
+        savePreferences(true, true, true, true);
+        if (cookieBanner) cookieBanner.style.display = 'none';
+        if (prefFeedback) prefFeedback.textContent = '✅ All cookies accepted! Enjoy personalized garden content.';
+        setTimeout(() => { if(prefFeedback) prefFeedback.textContent = ''; }, 2500);
+    }
+    
+    // Decline non-essential: set analytics, functional, targeting to false
+    function declineNonEssential() {
+        if (analyticsToggle) analyticsToggle.checked = false;
+        if (functionalToggle) functionalToggle.checked = false;
+        if (targetingToggle) targetingToggle.checked = false;
+        savePreferences(false, false, false, true);
+        if (cookieBanner) cookieBanner.style.display = 'none';
+        if (prefFeedback) prefFeedback.textContent = '🍃 Non-essential cookies declined. Only necessary cookies remain active.';
+        setTimeout(() => { if(prefFeedback) prefFeedback.textContent = ''; }, 3000);
+    }
+    
+    // Customize: just hide banner, keep current toggle values (user will later click save)
+    function customizeAndHide() {
+        if (cookieBanner) cookieBanner.style.display = 'none';
+        // scroll to preference center
+        document.getElementById('prefCenter')?.scrollIntoView({ behavior: 'smooth' });
+        if (prefFeedback) prefFeedback.textContent = '⚙️ Adjust your preferences above and click "Save My Preferences".';
+        setTimeout(() => { if(prefFeedback && prefFeedback.textContent === '⚙️ Adjust your preferences above and click "Save My Preferences".') prefFeedback.textContent = ''; }, 4000);
+    }
+    
+    // Save from preference center
+    function saveFromPreferenceCenter() {
+        const analyticsVal = analyticsToggle ? analyticsToggle.checked : true;
+        const functionalVal = functionalToggle ? functionalToggle.checked : true;
+        const targetingVal = targetingToggle ? targetingToggle.checked : true;
+        savePreferences(analyticsVal, functionalVal, targetingVal, true);
+        if (cookieBanner) cookieBanner.style.display = 'none';
+    }
+    
+    // attach event listeners
+    if (acceptAllBtn) acceptAllBtn.addEventListener('click', acceptAll);
+    if (declineBtn) declineBtn.addEventListener('click', declineNonEssential);
+    if (customizeBtn) customizeBtn.addEventListener('click', customizeAndHide);
+    if (savePrefBtn) savePrefBtn.addEventListener('click', saveFromPreferenceCenter);
+    
+    // On page load, load saved preferences and set toggle states accordingly (without overwriting banner if needed)
+    window.addEventListener('DOMContentLoaded', () => {
+        const prefs = loadSavedPreferences();
+        // toggles already set by loadSavedPreferences, but double-check consistency
+        if (analyticsToggle && prefs.analytics !== undefined) analyticsToggle.checked = prefs.analytics;
+        if (functionalToggle && prefs.functional !== undefined) functionalToggle.checked = prefs.functional;
+        if (targetingToggle && prefs.targeting !== undefined) targetingToggle.checked = prefs.targeting;
+        // if bannerDismissed true then banner hidden already; else ensure visible.
+        if (prefs.bannerDismissed && cookieBanner) cookieBanner.style.display = 'none';
+        else if (cookieBanner && !prefs.bannerDismissed) cookieBanner.style.display = 'flex';
+    });
+    
+    // Additional small UX: update table / preference status just for consistency
+    // Simulate "current status" message but no extra action needed.
+    console.log("Cookies policy page with preference manager ready 🌼");
+</script>
+</body>
+</html>

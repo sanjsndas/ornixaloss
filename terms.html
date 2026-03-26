@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Garden | Terms of Service</title>
+    <meta name="description" content="Terms of Service for Golden Garden. Read our guidelines, user responsibilities, and legal information for using our gardening resource website.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c2b28;
+            background-color: #fffef7;
+        }
+
+        /* Yellow Theme Color Palette */
+        :root {
+            --primary-yellow: #f9d56e;
+            --deep-yellow: #f4b942;
+            --gold-accent: #e6a017;
+            --soft-cream: #fff8e7;
+            --dark-text: #3e3a35;
+            --light-text: #7a6e5d;
+            --border-light: #f0e2c5;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-yellow), var(--deep-yellow));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .logo h1 {
+            font-size: 2.2rem;
+            color: #2c3e2f;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+        }
+
+        .logo p {
+            color: #2c5e2a;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e2f;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Page title & breadcrumb */
+        .page-header {
+            margin-bottom: 2rem;
+            border-bottom: 2px dashed var(--gold-accent);
+            padding-bottom: 1rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #4a6b3c;
+            display: inline-block;
+            background: var(--soft-cream);
+            padding: 0.2rem 1rem 0.2rem 0;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-top: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold-accent);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Terms content card */
+        .terms-card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-light);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .terms-card h2 {
+            color: #c47b2e;
+            font-size: 1.8rem;
+            margin: 1.5rem 0 0.8rem 0;
+            border-left: 5px solid var(--gold-accent);
+            padding-left: 1rem;
+        }
+
+        .terms-card h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .terms-card h3 {
+            color: #5a7a48;
+            font-size: 1.3rem;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+
+        .terms-card p {
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .terms-card ul, .terms-card ol {
+            margin: 1rem 0 1.2rem 2rem;
+        }
+
+        .terms-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: var(--soft-cream);
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            border-left: 4px solid var(--gold-accent);
+            margin: 1.5rem 0;
+        }
+
+        .effective-date {
+            font-style: italic;
+            background: #fef5e3;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-home {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid var(--gold-accent);
+            color: #4a6b3c;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold-accent);
+            color: white;
+            border-color: var(--gold-accent);
+        }
+
+        /* Footer */
+        footer {
+            background: #2e3b2c;
+            color: #f9e7c2;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-info a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #5a6e4a;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                justify-content: center;
+            }
+            .terms-card {
+                padding: 1.5rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .terms-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0;">
+        <div class="logo">
+            <h1>🌼 Golden Garden</h1>
+            <p>Where nature meets golden wisdom</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- breadcrumb & title -->
+    <div class="page-header">
+        <h1>🌿 Terms of Service</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Terms of Service</span>
+        </div>
+        <div class="effective-date">📅 Effective from: March 24, 2026</div>
+        <p style="margin-top: 0.8rem; color: #5a6e4a;">Welcome to Golden Garden! By accessing our website, you agree to be bound by these terms. Please read them carefully before using our gardening resources, guides, and community features.</p>
+    </div>
+
+    <div class="terms-card">
+        <h2>1. Acceptance of Terms</h2>
+        <p>Golden Garden (“we,” “us,” or “our”) provides gardening inspiration, educational articles, plant care guides, and related content (the “Service”). By visiting or interacting with our website at <strong>www.goldengarden.com</strong> (or any subdomains), you acknowledge that you have read, understood, and agree to be legally bound by these Terms of Service (“Terms”). If you do not agree with any part of these Terms, you must not use our website.</p>
+        
+        <h2>2. Use of Content & Intellectual Property</h2>
+        <p>All materials published on Golden Garden, including but not limited to articles, photographs, graphics, logos, illustrations, videos, and gardening guides, are protected by copyright, trademark, and other intellectual property laws. Unless otherwise noted, the content is owned by Golden Garden / Ornixa Moss Loft.</p>
+        <ul>
+            <li><strong>Personal & Non-Commercial Use:</strong> You may view, download, and print content for personal, non-commercial purposes only, provided you retain all copyright notices.</li>
+            <li><strong>Prohibited Uses:</strong> You may not reproduce, redistribute, modify, or exploit any content for commercial purposes without explicit written consent from us.</li>
+            <li><strong>User Contributions:</strong> If you submit comments, gardening photos, or testimonials, you grant Golden Garden a royalty-free, perpetual license to use, publish, and promote such content on our platforms with appropriate credit.</li>
+        </ul>
+        
+        <div class="highlight">
+            🌱 <strong>Golden Tip:</strong> Feel free to share our articles on social media with proper attribution to Golden Garden. We love spreading the joy of gardening!
+        </div>
+        
+        <h2>3. Accuracy of Information</h2>
+        <p>We strive to provide accurate, up-to-date gardening advice and horticultural insights. However, plant care depends on many factors including climate, soil conditions, and individual care. The information presented on Golden Garden is for general educational and inspirational purposes only. We do not guarantee specific results, and you assume full responsibility for any actions taken based on our content. Always consult local extension services or gardening professionals for region-specific concerns.</p>
+        
+        <h2>4. User Conduct & Responsibilities</h2>
+        <p>To maintain a positive community, you agree not to:</p>
+        <ul>
+            <li>Post or transmit any unlawful, defamatory, harassing, or abusive content.</li>
+            <li>Impersonate any person or entity or falsely state your affiliation.</li>
+            <li>Attempt to gain unauthorized access to our systems or interfere with the website's functionality.</li>
+            <li>Use our website for spam, advertising, or any commercial solicitation without prior permission.</li>
+        </ul>
+        <p>We reserve the right to remove any user-generated content that violates these guidelines and may restrict access to users who repeatedly breach our terms.</p>
+        
+        <h2>5. Third-Party Links & Affiliate Disclosure</h2>
+        <p>Our website may include links to external websites, gardening tool suppliers, or seed retailers. These links are provided for your convenience. Golden Garden does not endorse, nor are we responsible for, the content, privacy practices, or products of any third-party sites. Some links may be affiliate links, meaning we may earn a small commission if you make a purchase — at no additional cost to you. This helps support our gardening content creation. We only recommend products we genuinely believe in.</p>
+        
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>The Service is provided on an “AS IS” and “AS AVAILABLE” basis. Golden Garden makes no representations or warranties of any kind, express or implied, regarding the operation or availability of the website, or the information, content, and materials included. To the fullest extent permitted by law, we disclaim all warranties, express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose. We do not warrant that the site will be error-free, secure, or free of viruses.</p>
+        
+        <h2>7. Limitation of Liability</h2>
+        <p>In no event shall Golden Garden, its owners, employees, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use or inability to use the website, including loss of plants, crops, or personal injury. Some jurisdictions do not allow the exclusion of certain warranties, so these limitations may not apply to you. Our total liability, if any, shall not exceed the amount paid by you (if any) to access our website.</p>
+        
+        <h2>8. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Golden Garden, its affiliates, and contributors from any claims, damages, losses, liabilities, costs, or expenses (including reasonable legal fees) arising out of your violation of these Terms, your use of the site, or your infringement of any third-party rights.</p>
+        
+        <h2>9. Modifications to Terms</h2>
+        <p>We reserve the right to update or modify these Terms at any time without prior notice. The “Effective Date” at the top of this page indicates when the latest changes were made. Your continued use of Golden Garden after any modifications constitutes acceptance of the revised Terms. We encourage you to review this page periodically.</p>
+        
+        <h2>10. Termination</h2>
+        <p>We may suspend or terminate your access to the website immediately, without notice, for any reason, including if you breach these Terms. Upon termination, all provisions of these Terms which by their nature should survive shall remain in effect (including intellectual property provisions, warranty disclaimers, and limitation of liability).</p>
+        
+        <h2>11. Governing Law & Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or your use of the website shall be resolved exclusively in the state or federal courts located in Los Angeles County, California. You consent to personal jurisdiction in such courts.</p>
+        
+        <h2>12. Contact Information</h2>
+        <p>If you have any questions or concerns regarding these Terms of Service, please reach out to us:</p>
+        <ul>
+            <li>🌿 Email: <a href="mailto:legal@goldengarden.com" style="color: #e6a017;">legal@goldengarden.com</a></li>
+            <li>📬 Mail: Golden Garden Legal Dept., 123 Greenway Boulevard, Garden Heights, GH 56789</li>
+            <li>📞 Phone: <a href="tel:+1234567890" style="color: #e6a017;">+1 (234) 567-8901</a></li>
+        </ul>
+        <p>We aim to respond to all inquiries within 5–7 business days.</p>
+        
+        <div class="highlight">
+            🌻 <strong>Thank you for being part of the Golden Garden community!</strong> We're honored to help you cultivate beauty, one leaf at a time.
+        </div>
+    </div>
+    
+    <div class="back-home">
+        <a href="index.html" class="btn-outline">← Back to Golden Garden Home</a>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌿 Ornixa Moss Loft</h3>
+            <p>📍 123 Greenway Boulevard, Garden Heights, GH 56789</p>
+            <p>📞 <a href="tel:+1234567890">+1 (234) 567-8901</a></p>
+            <p>✉️ hello@goldengarden.com</p>
+        </div>
+        <div class="footer-info">
+            <h4>Quick Links</h4>
+            <p><a href="about.html">About Us</a></p>
+            <p><a href="#">Gardening Blog</a></p>
+            <p><a href="#">Workshops</a></p>
+            <p><a href="terms.html">Terms of Service</a></p>
+        </div>
+        <div class="footer-info">
+            <h4>Follow Our Garden Journey</h4>
+            <p>🌼 Instagram: @goldengarden</p>
+            <p>🌻 Pinterest: /goldengarden</p>
+            <p>🍃 TikTok: @goldengardenTips</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Golden Garden by Ornixa Moss Loft. Cultivating beauty since 2010. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
